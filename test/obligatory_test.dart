@@ -15,7 +15,7 @@ void main() {
     holder = null;
   });
 
-  test('registerUserByPhone', () {
+  test('module2', () {
     User user = holder.registerUserByPhone("John Ray", "+9-733 524-0185");
 
     expect(user.login, holder.getUserByLogin(user.login).login);
@@ -32,7 +32,7 @@ void main() {
     expect(() => holder.registerUserByPhone("John Ray", "+9-733 524-085"), throwsA(isA<Exception>()));
   });
 
-  test('registerUserByEmail', () {
+  test('module1', () {
     User user = holder.registerUserByEmail("John Ray", "ray1550@yahoo.net");
 
     expect(user.login, holder.getUserByLogin(user.login).login);
@@ -49,7 +49,7 @@ void main() {
     expect(() => holder.registerUserByEmail("John Ray", "ray1550@yahoo.net"), throwsA(isA<Exception>()));
   });
 
-  test('findUserInFriends', () {
+  test('module3', () {
     User user = User(name: "Dan Tot", phone: "+15750761449", email: "dan.tot@yandex.ru");
     holder.users[user.login] = user;
 
@@ -79,7 +79,7 @@ void main() {
     expect(() => holder.findUserInFriends(user.login, friends[1]), throwsA(isA<Exception>()));
   });
 
-  test('capitalize', () {
+  test('module4', () {
     expect(A().skill, 'Skill');
     expect(A().branch, 'Branch');
   });

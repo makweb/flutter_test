@@ -14,7 +14,7 @@ void main() {
     holder = null;
   });
 
-  test('Test: UserHolder.importUsers()', () {
+  test('module5', () {
     User user = User(name: "Dan Tot", phone: "+1 (231) 076-1449", email: "dan.tot@yandex.ru");
 
     List<User> users = holder.importUsers([
